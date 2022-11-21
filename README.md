@@ -57,7 +57,7 @@ EXPRESS_SECRET=<expressSecret>
 FRONTEND_URL=<frontendUrl>
 BACKEND_URL=<backendUrl>
 
-# cookie flags
+# cookie flags 
 ALL_ORIGINS="FALSE"
 SAME_HOST_COOKIE="TRUE"
 
