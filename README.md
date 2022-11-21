@@ -48,7 +48,7 @@ This is a summarised version, not all files are shown below.
 ```
 # mongo
 MONGO_URL=<mongoConnectionString>
-MONGO_DB=<mongoDbName>
+MONGO_DB=<mongoDbName> 
 
 # express
 EXPRESS_SECRET=<expressSecret>
