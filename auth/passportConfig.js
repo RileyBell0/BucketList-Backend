@@ -10,9 +10,12 @@ function initialise(passport, getUserByEmail, getUserByID) {
   // Authenticate a user by their email and password
   const authUser = async (email, password, done) => {
     // Ensure a user with the given email exists
+    console.log("PASSPORT - Authenticating user");
     try {
       email = email.toLowerCase();
+      console.log("PASSPORT - " + email);
       const user = await getUserByEmail(email);
+      console.log("PASSPORT - Got user by email, result was " + user);
       if (user === null) {
         throw "There is no user with that email";
       }

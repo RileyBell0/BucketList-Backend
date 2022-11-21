@@ -11,6 +11,7 @@ function checkAuth(req, res) {
 }
 
 function login(req, res, next) {
+  console.log("Trying to log user in");
   passport.authenticate("local", function (err, user, info) {
     if (err) {
       // If another error occured, send to user

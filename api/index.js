@@ -50,12 +50,10 @@ app.use((req, res, next) => {
 });
 app.use(flash());
 app.use(cookieParser());
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(function (req, res, next) {
   console.log("With session", req.sessionID);
   console.log(
