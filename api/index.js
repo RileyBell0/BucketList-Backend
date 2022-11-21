@@ -1,12 +1,12 @@
-const apiRouter = require("./routers/apiRouter");
-const authRouter = require("./routers/authRouter");
+const apiRouter = require("../routers/apiRouter");
+const authRouter = require("../routers/authRouter");
 const express = require("express");
 const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
-const passport = require("./auth/passportConfig");
-const db = require("./db");
-const response = require("./util/response");
+const passport = require("../auth/passportConfig");
+const db = require("../db");
+const response = require("../util/response");
 const cookieParser = require("cookie-parser");
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -69,14 +69,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(apiRouter);
-app.use(authRouter);
+app.use("/api", apiRouter);
+app.use("/api", authRouter);
 
-///////////////////////////////////////
-// Express
-///////////////////////////////////////
-
-app.get("*", (req, res) => {
+app.get("/api/*", (req, res) => {
   response.send(res, response.STATUS_OK, { message: "Pink Hippos Backend!!" });
 });
 
