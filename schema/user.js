@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const validThemes = ["Default", "Eucalyptus", "Sandy Cove"];
+const validThemes = ["Default", "Eucalyptus", "Sandy"];
 
 const userSchema = new Schema({
   email: {
